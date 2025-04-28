@@ -162,3 +162,5 @@ If ports are closed, that's the issue. Allow traffic:
 
 ![Screenshot 2025-04-28 230128](https://github.com/user-attachments/assets/4052ebf8-5253-454b-abb9-fcef93840d6a)
 
+
+# 📄 End of Report
