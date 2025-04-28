@@ -1,4 +1,14 @@
 # Troubleshooting Internal Web Dashboard Connectivity
+# Check Current DNS Configuration
+
+The `/etc/resolv.conf` file contains the nameserver(s) that the system uses for DNS resolution.
+
+Checking it helps confirm whether the system is configured to use internal DNS servers
+
+`cat /etc/resolv.conf`
+
+![Screenshot 2025-04-28 222940](https://github.com/user-attachments/assets/53d31814-af4a-4ab9-acdb-2a964c80aa95)
+
 
 # Verify DNS Resolution
 
