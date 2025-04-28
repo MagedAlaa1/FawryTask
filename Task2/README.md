@@ -44,7 +44,7 @@ Confirm TCP Connection with telnet
 ## Step 3 & Step 4
 # Possible Causes & Fixes
 
-1) DNS Issues
+### 1) DNS Issues
 
 Misconfigured or unreachable internal DNS server.
 Domain is not known by public DNS servers.
@@ -58,7 +58,7 @@ Restart DNS service:
 Or update `/etc/resolv.conf` with correct internal DNS.
 
 
-2) Service Issues
+### 2) Service Issues
 
 The web service may not be running on the correct port.
 Network configuration issues preventing access to the server.
@@ -72,7 +72,7 @@ Check if service is listening on ports:
 If no service is listening, that’s the issue.
 
 
-3) Network Configuration
+### 3) Network Configuration
 
 Misconfigured firewall or security group rules on the internal server.
 
