@@ -1,16 +1,16 @@
-## Breakdown of How My Script Handles Arguments and Options
+1-Breakdown of How My Script Handles Arguments and Options
 
 First, the script checks if the user gave enough arguments.
 It reads the options (-n, -v) and allows them to be combined like -vn.
 Then it searches the file and prints matching or non-matching lines, with line numbers if needed.
 
-## If I Added Regex, -i, -c, or -l
+2-If I Added Regex, -i, -c, or -l
 
 I would need to add more flags for each option and use better parsing with getopts.
 For regex, I would use a different way to match patterns.
 For -c, I would just count the matches. For -l, I would print the filename if there’s a match.
 
-## Hardest Part
+3-Hardest Part
 
 The hardest thing was dealing with combined options like -vn.
 Also, making the script show the right lines when using -v was a little tricky.
