@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Show help if --help is passed
 if [[ "$1" == "--help" ]]; then
   echo "Usage: $0 [options] search_string filename"
   echo "Options:"
@@ -8,6 +9,7 @@ if [[ "$1" == "--help" ]]; then
   exit 0
 fi
 
+# Check if enough arguments are passed
 if [ $# -lt 2 ]; then
   echo "Usage: $0 [options] search_string filename"
   exit 1
@@ -17,6 +19,7 @@ OPTIONS=""
 SEARCH=""
 FILE=""
 
+# Parse options
 if [[ "$1" == -* ]]; then
   OPTIONS="$1"
   SEARCH="$2"
@@ -26,6 +29,7 @@ else
   FILE="$2"
 fi
 
+# Validate inputs
 if [ -z "$SEARCH" ] || [ -z "$FILE" ]; then
   echo "Error: Missing search string or filename."
   echo "Usage: $0 [options] search_string filename"
@@ -37,15 +41,28 @@ if [ ! -f "$FILE" ]; then
   exit 1
 fi
 
-GREP_OPTIONS="-i"
+# Read file line by line
+LINE_NUM=0
+while IFS= read -r line || [ -n "$line" ]; do
+  LINE_NUM=$((LINE_NUM + 1))
 
-if [[ "$OPTIONS" == *n* ]]; then
-  GREP_OPTIONS="$GREP_OPTIONS -n"
-fi
+  # Case-insensitive comparison
+  if [[ "${line,,}" == *"${SEARCH,,}"* ]]; then
+    MATCH=1
+  else
+    MATCH=0
+  fi
 
-if [[ "$OPTIONS" == *v* ]]; then
-  GREP_OPTIONS="$GREP_OPTIONS -v"
-fi
+  # Handle -v option (invert match)
+  if [[ "$OPTIONS" == *v* ]]; then
+    MATCH=$((1 - MATCH))
+  fi
 
-grep $GREP_OPTIONS -- "$SEARCH" "$FILE"
-
+  if [ $MATCH -eq 1 ]; then
+    if [[ "$OPTIONS" == *n* ]]; then
+      echo "${LINE_NUM}:$line"
+    else
+      echo "$line"
+    fi
+  fi
+done < "$FILE"
