@@ -50,8 +50,8 @@ Then it searches the file and prints matching or non-matching lines, with line n
 ## If I Added Regex, -i, -c, or -l
 
 I would need to add more flags for each option and use better parsing with getopts.
-For regex, I would use a different way to match patterns.
-For -c, I would just count the matches. For -l, I would print the filename if there’s a match.
+For regex `[[ "$line" =~ $PATTERN ]]` , I would use a different way to match patterns.
+For `-c`, I would just count the matches. For `-l`, I would print the filename if there’s a match.
 
 ## Hardest Part
 
