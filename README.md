@@ -39,6 +39,26 @@ Make sure the script is executable
 ![WhatsApp Image 2025-04-28 at 12 42 46 AM](https://github.com/user-attachments/assets/e8486e76-7576-4ca5-b7d0-320696dac032)
 
 
+# Reflective Section
+
+## Breakdown of How My Script Handles Arguments and Options
+
+First, the script checks if the user gave enough arguments.
+It reads the options (-n, -v) and allows them to be combined like -vn.
+Then it searches the file and prints matching or non-matching lines, with line numbers if needed.
+
+## If I Added Regex, -i, -c, or -l
+
+I would need to add more flags for each option and use better parsing with getopts.
+For regex, I would use a different way to match patterns.
+For -c, I would just count the matches. For -l, I would print the filename if there’s a match.
+
+## Hardest Part
+
+The hardest thing was dealing with combined options like -vn.
+Also, making the script show the right lines when using -v was a little tricky.
+
+
 
 # Q2 : Scenario
 
