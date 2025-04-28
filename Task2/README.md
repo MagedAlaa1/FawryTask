@@ -28,7 +28,7 @@ We performed DNS checks to verify whether `internal.example.com` is correctly re
 
 To verify whether the internal service (`internal.example.com`) is reachable and properly running, the following steps were performed:
 
-## 1. Test HTTP Response with `curl`
+## Test HTTP Response with `curl`
 
 We use `curl` to check if the service is up and responding correctly:
 `curl -I http://internal.example.com`
