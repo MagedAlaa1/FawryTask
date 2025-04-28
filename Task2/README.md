@@ -83,9 +83,16 @@ Check firewall rules:
 
 
 If ports are closed, that's the issue. Allow traffic:
+
 `sudo ufw allow 80/tcp`
+
 `sudo ufw allow 443/tcp`
+
+`sudo ufw enable`
+
 `sudo ufw reload`
+
+![Screenshot 2025-04-28 224510](https://github.com/user-attachments/assets/22e7f499-e90b-4ea7-804b-837f0f76b3a5)
 
 
 
