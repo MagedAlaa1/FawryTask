@@ -12,5 +12,5 @@ Run the following command to check the DNS settings from your local system’s D
 
 ```bash
 cat /etc/resolv.conf
-![Verify DNS ](https://github.com/user-attachments/assets/4cfd88e8-3a5a-4c23-bc78-cf455d13b911)
 
+![Verify DNS ](https://github.com/user-attachments/assets/8cce1955-c9a0-4b3d-ae05-f82dc1c1e18b)
