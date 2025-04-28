@@ -13,4 +13,6 @@ Run the following command to check the DNS settings from your local system’s D
 ```bash
 cat /etc/resolv.conf
 
+dig internal.example.com
 
+dig @8.8.8.8 internal.example.com
