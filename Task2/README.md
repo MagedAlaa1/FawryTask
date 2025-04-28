@@ -94,6 +94,10 @@ If ports are closed, that's the issue. Allow traffic:
 
 ![Screenshot 2025-04-28 224510](https://github.com/user-attachments/assets/22e7f499-e90b-4ea7-804b-837f0f76b3a5)
 
+`sudo ufw status`
+
+![Screenshot 2025-04-28 230128](https://github.com/user-attachments/assets/4052ebf8-5253-454b-abb9-fcef93840d6a)
+
 
 
 
