@@ -65,9 +65,7 @@ Network configuration issues preventing access to the server.
 
 Fixing:
 
-Check if service is listening on ports:
-`grep ':80|:443'`
-
+Check if service is listening on ports
 
 If no service is listening, that’s the issue.
 
