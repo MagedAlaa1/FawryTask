@@ -65,7 +65,9 @@ Network configuration issues preventing access to the server.
 
 Fixing:
 
-Check if service is listening on ports
+Check if service is listening on ports 
+
+`sudo netstat -tuln | grep ':80\|:443'`
 
 If no service is listening, that’s the issue.
 
