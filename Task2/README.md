@@ -6,14 +6,12 @@
 
 To verify DNS resolution from your local configuration and compare it to Google's DNS (8.8.8.8), follow these steps:
 
-#### Check DNS Resolution from `/etc/resolv.conf`
-![Diagnose Service Reachability](https://github.com/user-attachments/assets/e3dba3b5-2b39-407e-af89-8a20ebe4bde1)
+#### Check DNS Resolution from `/etc/resolv.conf` 
 
-Run the following command to check the DNS settings from your local system’s DNS resolver:
 
-```bash
-cat /etc/resolv.conf
+![Verify DNS ](https://github.com/user-attachments/assets/c7d53ac5-1d94-4e5d-94d3-0aa2b43a47ac)
 
-dig internal.example.com
+# Diagnose Service Reachability
 
-dig @8.8.8.8 internal.example.com
+
+![Diagnose Service Reachability](https://github.com/user-attachments/assets/21c8908b-e4de-488d-ba46-1ddd2198746d)
